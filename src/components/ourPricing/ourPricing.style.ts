@@ -7,7 +7,6 @@ const Container = styled.div`
   padding: 72px 135px;
   gap: 72px;
   width: 1440px;
-  background: #f3f3f3;
 
   .title {
     font-family: "Poppins";
@@ -27,7 +26,6 @@ const Container = styled.div`
     padding: 0px 100px;
     gap: 32px;
     width: 1173px;
-    height: 726px;
   }
 
   .priceContainer {
