@@ -5,6 +5,7 @@ import GetStarted from "@/components/getStarted/getStarted";
 import About from "@/components/about/about";
 import OurServices from "@/components/ourServices/ourServices";
 import OurPortfolio from "@/components/ourPortfolio/ourPortfolio";
+import OurPricing from "@/components/ourPricing/ourPricing";
 
 export const metadata = {
   title: "Home",
@@ -21,6 +22,7 @@ export default function Home() {
         <About />
         <OurServices />
         <OurPortfolio />
+        <OurPricing />
       </main>
     </Background>
   );
