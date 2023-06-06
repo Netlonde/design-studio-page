@@ -58,6 +58,13 @@ const Container = styled.div`
       width: 175px;
       height: 48px;
       border: 2.5px solid #151515;
+      font-family: "Poppins";
+      font-size: 15px;
+      color: #151515;
+    }
+
+    button:hover {
+      opacity: 0.8;
     }
   }
 `;
