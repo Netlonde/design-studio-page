@@ -6,3 +6,4 @@ export * from "./customButtom/customButtom";
 export * from "./ourPortfolio/ourPortfolio";
 export * from "./ourPricing/ourPricing";
 export * from "./whatPeopleSay/whatPeopleSay";
+export * from "./questions/questions";
