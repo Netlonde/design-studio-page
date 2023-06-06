@@ -1,6 +1,7 @@
 import Header from "@/components/header/header";
 import useHomeController from "./home.controller";
 import Background from "./home.style";
+import GetStarted from "@/components/getStarted/getStarted";
 
 export const metadata = {
   title: "Home",
@@ -13,7 +14,7 @@ export default function Home() {
     <Background>
       <Header />
       <main>
-        <div>{nameTest}</div>
+        <GetStarted />
       </main>
     </Background>
   );
