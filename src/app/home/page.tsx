@@ -7,6 +7,7 @@ import OurServices from "@/components/ourServices/ourServices";
 import OurPortfolio from "@/components/ourPortfolio/ourPortfolio";
 import OurPricing from "@/components/ourPricing/ourPricing";
 import WhatPeopleSay from "@/components/whatPeopleSay/whatPeopleSay";
+import Questions from "@/components/questions/questions";
 
 export const metadata = {
   title: "Home",
@@ -25,6 +26,7 @@ export default function Home() {
         <OurPortfolio />
         <OurPricing />
         <WhatPeopleSay />
+        <Questions />
       </main>
     </Background>
   );
