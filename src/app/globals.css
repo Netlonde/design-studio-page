@@ -21,3 +21,9 @@ body .Toastify .Toastify__toast-container .Toastify__toast--error {
 a {
   text-decoration: none;
 }
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
