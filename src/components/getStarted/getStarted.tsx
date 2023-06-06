@@ -4,6 +4,7 @@ import { FaAngleDown } from "react-icons/fa";
 import useGetStartedController from "./getStarted.controller";
 import Container from "./getStarted.style";
 import iconPhoto from "../../assets/images/icon-photo.svg";
+import CustomButtom from "../customButtom/customButtom";
 
 export default function GetStarted() {
   const { nameTest } = useGetStartedController();
@@ -19,7 +20,7 @@ export default function GetStarted() {
           </p>
         </div>
         <div className="buttonContainer">
-          <button>Get started</button>
+          <CustomButtom text="Get started" />
         </div>
       </div>
       <div className="rightContainer">
