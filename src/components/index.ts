@@ -7,3 +7,4 @@ export * from "./ourPortfolio/ourPortfolio";
 export * from "./ourPricing/ourPricing";
 export * from "./whatPeopleSay/whatPeopleSay";
 export * from "./questions/questions";
+export * from "./footer/footer";

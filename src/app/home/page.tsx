@@ -8,6 +8,7 @@ import OurPortfolio from "@/components/ourPortfolio/ourPortfolio";
 import OurPricing from "@/components/ourPricing/ourPricing";
 import WhatPeopleSay from "@/components/whatPeopleSay/whatPeopleSay";
 import Questions from "@/components/questions/questions";
+import Footer from "@/components/footer/footer";
 
 export const metadata = {
   title: "Home",
@@ -28,6 +29,7 @@ export default function Home() {
         <WhatPeopleSay />
         <Questions />
       </main>
+      <Footer />
     </Background>
   );
 }
