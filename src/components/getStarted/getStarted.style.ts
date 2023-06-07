@@ -33,7 +33,7 @@ const Container = styled.div`
   }
 
   .title {
-    font-family: "Poppins";
+    font-family: "sans-serif";
     font-weight: 400;
     font-size: 52px;
     line-height: 72px;
@@ -42,7 +42,7 @@ const Container = styled.div`
   }
 
   .text {
-    font-family: "Poppins";
+    font-family: "sans-serif";
     font-size: 16px;
     line-height: 24px;
     color: #151515;
@@ -58,7 +58,7 @@ const Container = styled.div`
       width: 175px;
       height: 48px;
       border: 2.5px solid #151515;
-      font-family: "Poppins";
+      font-family: "sans-serif";
       font-size: 15px;
       color: #151515;
     }

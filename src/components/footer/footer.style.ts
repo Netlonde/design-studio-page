@@ -27,7 +27,7 @@ const Container = styled.div`
 
   .text {
     width: 300px;
-    font-family: "Poppins";
+    font-family: "sans-serif";
     font-size: 16px;
     line-height: 150%;
     color: #151515;
@@ -65,7 +65,7 @@ const Container = styled.div`
     gap: 10px;
 
     h4 {
-      font-family: "Poppins";
+      font-family: "sans-serif";
       font-style: normal;
       font-weight: 500;
       font-size: 16px;
@@ -74,7 +74,7 @@ const Container = styled.div`
     }
 
     p {
-      font-family: "Poppins";
+      font-family: "sans-serif";
       font-style: normal;
       font-weight: 400;
       font-size: 14px;

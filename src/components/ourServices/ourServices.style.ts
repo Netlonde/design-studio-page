@@ -11,7 +11,7 @@ const Container = styled.div`
   height: 708px;
 
   .title {
-    font-family: "Poppins";
+    font-family: "sans-serif";
     font-weight: 400;
     font-size: 40px;
     line-height: 130%;
@@ -33,7 +33,7 @@ const Container = styled.div`
   }
 
   .starText {
-    font-family: "Poppins";
+    font-family: "sans-serif";
     font-size: 16px;
     line-height: 24px;
     text-align: center;

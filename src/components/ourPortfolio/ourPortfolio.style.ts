@@ -10,7 +10,7 @@ const Container = styled.div`
   background: #f3f3f3;
 
   .title {
-    font-family: "Poppins";
+    font-family: "sans-serif";
     font-weight: 400;
     font-size: 40px;
     line-height: 130%;

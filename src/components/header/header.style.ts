@@ -20,7 +20,7 @@ const Container = styled.div`
     gap: 20px;
 
     button {
-      font-family: "Poppins";
+      font-family: "sans-serif";
       font-size: 15px;
       color: #161616;
     }
@@ -38,7 +38,7 @@ const Container = styled.div`
 
     span,
     button {
-      font-family: "Poppins";
+      font-family: "sans-serif";
       font-size: 15px;
       line-height: 24px;
       color: #161616;

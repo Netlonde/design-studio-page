@@ -10,7 +10,7 @@ const Container = styled.div`
   background: #f3f3f3;
 
   .title {
-    font-family: "Poppins";
+    font-family: "sans-serif";
     font-weight: 400;
     font-size: 40px;
     line-height: 130%;
@@ -59,7 +59,7 @@ const Container = styled.div`
     width: 150%;
 
     h3 {
-      font-family: "Poppins";
+      font-family: "sans-serif";
       font-weight: 500;
       font-size: 20px;
       line-height: 30px;
@@ -67,7 +67,7 @@ const Container = styled.div`
     }
 
     span {
-      font-family: "Poppins";
+      font-family: "sans-serif";
       font-size: 18px;
       color: #d9d9d9;
       margin-bottom: 15px;
@@ -88,7 +88,7 @@ const Container = styled.div`
   }
 
   .text {
-    font-family: "Poppins";
+    font-family: "sans-serif";
     font-size: 16px;
     color: #151515;
     width: 400px;

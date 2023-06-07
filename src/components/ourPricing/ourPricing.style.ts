@@ -9,7 +9,7 @@ const Container = styled.div`
   width: 1440px;
 
   .title {
-    font-family: "Poppins";
+    font-family: "sans-serif";
     font-weight: 400;
     font-size: 40px;
     line-height: 130%;
@@ -73,7 +73,7 @@ const Container = styled.div`
   }
 
   .priceTitle {
-    font-family: "Poppins";
+    font-family: "sans-serif";
     font-weight: 400;
     font-size: 24px;
     line-height: 36px;
@@ -81,7 +81,7 @@ const Container = styled.div`
   }
 
   .price {
-    font-family: "Poppins";
+    font-family: "sans-serif";
     font-style: normal;
     font-weight: 400;
     font-size: 44px;
@@ -90,7 +90,7 @@ const Container = styled.div`
   }
 
   .time {
-    font-family: "Poppins";
+    font-family: "sans-serif";
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
@@ -100,7 +100,7 @@ const Container = styled.div`
   }
 
   .text {
-    font-family: "Poppins";
+    font-family: "sans-serif";
     font-size: 14px;
     line-height: 170%;
     text-align: center;
