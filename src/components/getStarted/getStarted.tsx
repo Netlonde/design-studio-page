@@ -5,6 +5,7 @@ import useGetStartedController from "./getStarted.controller";
 import Container from "./getStarted.style";
 import iconPhoto from "../../assets/images/icon-photo.svg";
 import CustomButtom from "../customButtom/customButtom";
+import BuyModal from "../buyModal/buyModal";
 
 export default function GetStarted() {
   const { nameTest } = useGetStartedController();
@@ -26,6 +27,7 @@ export default function GetStarted() {
       <div className="rightContainer">
         <Image src={iconPhoto} alt="icon photo" />
       </div>
+      <BuyModal />
     </Container>
   );
 }
