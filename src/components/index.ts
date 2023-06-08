@@ -8,3 +8,4 @@ export * from "./ourPricing/ourPricing";
 export * from "./whatPeopleSay/whatPeopleSay";
 export * from "./questions/questions";
 export * from "./footer/footer";
+export * from "./buyModal/buyModal";
