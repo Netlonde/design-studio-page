@@ -12,6 +12,7 @@ export const Background = styled.div`
   right: 0;
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.4);
+  z-index: 2;
 `;
 
 const Container = styled.div`
@@ -19,8 +20,8 @@ const Container = styled.div`
   align-items: flex-start;
   padding: 37px 43px;
   gap: 10px;
-  width: 1151px;
-  height: 720px;
+  width: 1142px;
+  height: auto;
   background-color: #ffffff;
   border: 1px solid #dde2e6;
   border-radius: 20px;
@@ -253,6 +254,32 @@ const Container = styled.div`
     flex-direction: column;
     margin-left: 180px;
     width: 300px;
+    gap: 12px;
+  }
+
+  .paymentSummary {
+    width: 350px;
+    background-color: #f5f6fb;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    padding: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    gap: 20px;
+    height: 170px;
+    margin-top: 10px;
+    border-radius: 8px;
+    margin-left: 35px;
+    h3 {
+      color: #5e6366;
+      font-weight: 500;
+    }
+
+    hr {
+      width: 100%;
+      opacity: 0.2;
+    }
   }
 
   .cardContainer {
@@ -262,9 +289,20 @@ const Container = styled.div`
     justify-content: center;
   }
 
-  .rccs__card {
-    height: 219.44px;
-    width: 348px;
+  .paymentValue {
+    color: #5e6366;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .paymentTotalValue {
+    opacity: 0.8;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
   }
 `;
 

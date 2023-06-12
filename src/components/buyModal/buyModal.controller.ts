@@ -3,28 +3,30 @@
 import { useEffect, useState } from "react";
 import { countryDDI } from "@/constants";
 import { useStripe, useElements } from "@stripe/react-stripe-js";
+import { useBuyModalStore } from "@/store/index";
 
 function useBuyModalController() {
   const [flag1, setFlag1] = useState(countryDDI[0].name);
   const [flag2, setFlag2] = useState(countryDDI[0].name);
   const [step, setStep] = useState(1);
-  const [cardNumber, setCardNumber] = useState("");
-  const [cvcNumber, setCvcNumber] = useState("");
-  const [expNumber, setExpNumber] = useState("");
-  const [cardName, setCardName] = useState("");
-  const [cardFocused, setCardFocused]: any = useState("number");
   const myStripe = useStripe();
   const elements = useElements();
 
+  const { handleOpenBuyModal, price } = useBuyModalStore();
+
   async function handlePay() {
-    if (!myStripe || !elements) return;
+    try {
+      if (!myStripe || !elements) return;
 
-    const { error } = await myStripe.confirmPayment({
-      elements,
-      redirect: "if_required",
-    });
+      await myStripe.confirmPayment({
+        elements,
+        redirect: "if_required",
+      });
 
-    if (error) console.log(error);
+      handleOpenBuyModal(false);
+    } catch (error: any) {
+      if (error) console.log(error);
+    }
   }
 
   function updateProgressBar(progress: any) {
@@ -36,27 +38,7 @@ function useBuyModalController() {
     updateProgressBar(step === 1 ? 50 : 100);
     setStep(step);
 
-    // if (step === 2) handlePay();
-  }
-
-  function handleSetCardNumber(cardNumber: string) {
-    setCardNumber(cardNumber);
-    setCardFocused("number");
-  }
-
-  function handleSetCvcNumber(cvcNumber: string) {
-    setCvcNumber(cvcNumber);
-    setCardFocused("cvc");
-  }
-
-  function handleSetExpNumber(expNumber: string) {
-    setExpNumber(expNumber);
-    setCardFocused("expiry");
-  }
-
-  function handleSetCardName(cardName: string) {
-    setCardName(cardName);
-    setCardFocused("name");
+    if (step === 3) handlePay();
   }
 
   useEffect(() => {
@@ -68,24 +50,13 @@ function useBuyModalController() {
   return {
     flag1,
     flag2,
-    handleSetCardNumber,
-    handleSetCvcNumber,
-    handleSetExpNumber,
-    handleSetCardName,
     countryDDI,
     setFlag1,
     setFlag2,
     step,
     handleClickContinue,
-    setCardNumber,
-    cardNumber,
-    cvcNumber,
-    setCvcNumber,
-    cardFocused,
-    expNumber,
-    setExpNumber,
-    cardName,
-    setCardName,
+    handleOpenBuyModal,
+    price,
   };
 }
 

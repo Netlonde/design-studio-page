@@ -5,7 +5,7 @@ import "react-credit-cards/es/styles-compiled.css";
 import Image from "next/image";
 import useBuyModalController from "./buyModal.controller";
 import Container, { Background } from "./buyModal.style";
-import { PaymentElement } from "@stripe/react-stripe-js";
+import { AddressElement, PaymentElement } from "@stripe/react-stripe-js";
 
 export default function BuyModal() {
   const {
@@ -16,15 +16,8 @@ export default function BuyModal() {
     setFlag1,
     setFlag2,
     step,
-    cardNumber,
-    cvcNumber,
-    cardFocused,
-    expNumber,
-    cardName,
-    handleSetCardName,
-    handleSetCardNumber,
-    handleSetCvcNumber,
-    handleSetExpNumber,
+    price,
+    handleOpenBuyModal,
   } = useBuyModalController();
 
   return (
@@ -120,27 +113,39 @@ export default function BuyModal() {
           <div className="mainContainer">
             <div className="cardInputContainer">
               <PaymentElement />
+              <AddressElement options={{ mode: "billing" }} />
             </div>
-            <div className="cardContainer">
-              <Cards
-                cvc={cvcNumber}
-                expiry={expNumber}
-                focused={cardFocused}
-                name={cardName}
-                number={cardNumber}
-              />
+            <div className="paymentSummary">
+              <h3>Payment Summary </h3>
+              <div className="paymentValue">
+                <span>Products</span>
+                <span>$ {price}</span>
+              </div>
+              <hr />
+              <div className="paymentTotalValue">
+                <span>You will pay</span>
+                <span>1x $ {price}</span>
+              </div>
             </div>
           </div>
         )}
         <div className="buttonsContainer">
           <button
-            onClick={step === 1 ? () => {} : () => handleClickContinue(1)}
+            onClick={
+              step === 1
+                ? () => handleOpenBuyModal(false)
+                : () => handleClickContinue(1)
+            }
           >
             {step === 1 ? "Cancel" : "Back"}
           </button>
           <button
             className="continueButton"
-            onClick={() => handleClickContinue(2)}
+            onClick={
+              step === 1
+                ? () => handleClickContinue(2)
+                : () => handleClickContinue(3)
+            }
           >
             {step === 1 ? "Continue" : "Buy"}
           </button>
