@@ -26,6 +26,17 @@ export default function Home() {
               stripe={stripePromise}
               options={{
                 clientSecret,
+                locale: "en",
+                appearance: {
+                  theme: "flat",
+                  variables: {
+                    colorBackground: "#f5f6fb",
+                    fontFamily: "Inter",
+                    colorText: "#5e6366",
+                    fontSizeSm: "13px",
+                    spacingUnit: "4.2px",
+                  },
+                },
               }}
             >
               <GetStarted />
