@@ -1,6 +1,9 @@
+import { useBuyModalStore } from "@/store";
+
 function useourServicesController() {
-  const nameTest = "Welcome to ourServices";
-  return { nameTest };
+  const { handleOpenBuyModal } = useBuyModalStore();
+
+  return { handleOpenBuyModal };
 }
 
 export default useourServicesController;

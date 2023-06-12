@@ -7,11 +7,11 @@ import Star from "../../assets/images/icon-star.svg";
 import CustomButtom from "../customButtom/customButtom";
 
 export default function Questions() {
-  const { nameTest } = useQuestionsController();
+  const { handleOpenBuyModal } = useQuestionsController();
   return (
     <Container>
       <h2 className="title">Do you have any question?</h2>
-      <CustomButtom text="ORDER A CALL" />
+      <CustomButtom text="ORDER A CALL" onClick={handleOpenBuyModal} />
     </Container>
   );
 }

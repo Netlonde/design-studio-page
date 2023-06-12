@@ -1,6 +1,5 @@
 "use client";
 import Image from "next/image";
-import { FaAngleDown } from "react-icons/fa";
 import useGetStartedController from "./getStarted.controller";
 import Container from "./getStarted.style";
 import iconPhoto from "../../assets/images/icon-photo.svg";
@@ -8,7 +7,7 @@ import CustomButtom from "../customButtom/customButtom";
 import BuyModal from "../buyModal/buyModal";
 
 export default function GetStarted() {
-  const { nameTest } = useGetStartedController();
+  const { handleOpenBuyModal, isOpenBuyModal } = useGetStartedController();
   return (
     <Container>
       <div className="leftContainer">
@@ -21,13 +20,16 @@ export default function GetStarted() {
           </p>
         </div>
         <div className="buttonContainer">
-          <CustomButtom text="Get started" />
+          <CustomButtom
+            text="Get started"
+            onClick={() => handleOpenBuyModal(true)}
+          />
         </div>
       </div>
       <div className="rightContainer">
         <Image src={iconPhoto} alt="icon photo" />
       </div>
-      <BuyModal />
+      {isOpenBuyModal && <BuyModal />}
     </Container>
   );
 }

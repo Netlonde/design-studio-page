@@ -1,6 +1,7 @@
+import { useBuyModalStore } from "@/store/index";
 function useGetStartedController() {
-  const nameTest = "Welcome to GetStarted";
-  return { nameTest };
+  const { handleOpenBuyModal, isOpenBuyModal } = useBuyModalStore();
+  return { handleOpenBuyModal, isOpenBuyModal };
 }
 
 export default useGetStartedController;

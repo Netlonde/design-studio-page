@@ -1,6 +1,14 @@
+import { useBuyModalStore } from "@/store";
+
 function useOurPricingController() {
-  const nameTest = "Welcome to OurPricing";
-  return { nameTest };
+  const { handleOpenBuyModal, handleSetPrice } = useBuyModalStore();
+
+  function handleClickOption(value: number) {
+    handleSetPrice(value);
+    handleOpenBuyModal(true);
+  }
+
+  return { handleClickOption };
 }
 
 export default useOurPricingController;

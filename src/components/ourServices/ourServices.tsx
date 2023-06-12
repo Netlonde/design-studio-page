@@ -7,7 +7,7 @@ import Star from "../../assets/images/icon-star.svg";
 import CustomButtom from "../customButtom/customButtom";
 
 export default function OurServices() {
-  const { nameTest } = useourServicesController();
+  const { handleOpenBuyModal } = useourServicesController();
   return (
     <Container>
       <h2 className="title">
@@ -44,7 +44,10 @@ export default function OurServices() {
           </p>
         </div>
       </div>
-      <CustomButtom text="Free consultation" />
+      <CustomButtom
+        text="Free consultation"
+        onClick={() => handleOpenBuyModal(true)}
+      />
     </Container>
   );
 }

@@ -1,6 +1,9 @@
+import { useBuyModalStore } from "@/store";
+
 function useQuestionsController() {
-  const nameTest = "Welcome to Questions";
-  return { nameTest };
+  const { handleOpenBuyModal } = useBuyModalStore();
+
+  return { handleOpenBuyModal };
 }
 
 export default useQuestionsController;

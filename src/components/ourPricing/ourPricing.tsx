@@ -1,11 +1,9 @@
 "use client";
-import Image from "next/image";
 import useOurPricingController from "./ourPricing.controller";
 import Container from "./ourPricing.style";
-import iconPhoto from "../../assets/images/icon-photo.svg";
 
 export default function OurPricing() {
-  const { nameTest } = useOurPricingController();
+  const { handleClickOption } = useOurPricingController();
   return (
     <Container>
       <h2 className="title">
@@ -21,7 +19,9 @@ export default function OurPricing() {
             Interior Design Project Discussion Space Planning Online
             Consultation
           </p>
-          <button className="buyButton">BUY NOW</button>
+          <button className="buyButton" onClick={() => handleClickOption(25)}>
+            BUY NOW
+          </button>
         </div>
         <div className="priceBlackContainer">
           <h3 className="priceTitle">Standart</h3>
@@ -31,7 +31,7 @@ export default function OurPricing() {
           <p className="text">
             Color Analysis Space Planning Home Remodeling 3D Interior Model
           </p>
-          <button>BUY NOW</button>
+          <button onClick={() => handleClickOption(50)}>BUY NOW</button>
         </div>
         <div className="priceContainer">
           <h3 className="priceTitle">Premium</h3>
@@ -42,7 +42,7 @@ export default function OurPricing() {
             Concept Development Decoration Services Interior Architecture
             Flooring Installation
           </p>
-          <button>BUY NOW</button>
+          <button onClick={() => handleClickOption(80)}>BUY NOW</button>
         </div>
       </div>
     </Container>
