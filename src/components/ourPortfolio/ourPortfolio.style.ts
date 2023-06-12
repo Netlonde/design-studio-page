@@ -7,7 +7,7 @@ const Container = styled.div`
   padding: 72px 135px;
   gap: 72px;
   width: 1440px;
-  background: #f3f3f3;
+  background: #f5f6fb;
 
   .title {
     font-family: "sans-serif";

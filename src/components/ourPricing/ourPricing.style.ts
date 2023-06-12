@@ -113,7 +113,7 @@ const Container = styled.div`
 
   hr {
     width: 100%;
-    color: #f3f3f3;
+    color: #f5f6fb;
   }
 
   button:hover {

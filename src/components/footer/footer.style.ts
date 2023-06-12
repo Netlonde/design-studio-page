@@ -9,7 +9,7 @@ const Container = styled.div`
   gap: 243px;
   width: 1440px;
   height: 428px;
-  background: #f3f3f3;
+  background: #f5f6fb;
 
   .detailContainer {
     display: flex;

@@ -7,7 +7,7 @@ const Container = styled.div`
 
   width: 1440px;
   height: 414px;
-  background: #f3f3f3;
+  background: #f5f6fb;
 
   .title {
     font-family: "sans-serif";
